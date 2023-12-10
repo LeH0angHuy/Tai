@@ -1,0 +1,86 @@
+/* Your existing CSS styles go here */
+
+body {
+    margin: 0;
+  }
+  
+  .map {
+    position: absolute;
+    width: 100%;
+    height: 140vh;
+    background-image: linear-gradient(to right, pink, pink);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .gift-box {
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    top: 40%;
+    right: 45%;
+    cursor: pointer;
+    animation: rung 0.5s infinite;
+  }
+  
+  @keyframes rung {
+    0% {
+      transform: rotate(15deg);
+    }
+    50% {
+      transform: rotate(-15deg);
+    }
+    100% {
+      transform: rotate(15deg);
+    }
+  }
+  
+  .snow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url('heart.png');
+    background-size: cover;
+    animation: up 4s ease-in-out infinite;
+  }
+  
+  @keyframes up {
+    0% {
+      transform: translate(0, 35vh);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(30, -400deg);
+      opacity: 0;
+    }
+  }
+  
+  /* New GUI Overlay Styles */
+  .gui-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Black background with 0.7 alpha (adjust as needed) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    display: none;
+    backdrop-filter: blur(5px);
+  }
+  
+  .birthday-text {
+    font-size: 48px;
+    color: red; /* Change color to red */
+    text-align: center;
+  }
+  
